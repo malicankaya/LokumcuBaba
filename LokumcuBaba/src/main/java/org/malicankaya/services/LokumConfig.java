@@ -22,7 +22,7 @@ import java.time.format.DateTimeFormatter;
 @ComponentScan(basePackages = "org.malicankaya.controller")
 public class LokumConfig implements WebMvcConfigurer
 {
-    //for bootstrap
+    //bootstrap dizini için
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry)
     {
@@ -31,6 +31,7 @@ public class LokumConfig implements WebMvcConfigurer
                 addResourceLocations("/webjars/");
     }
 
+    //jsp dosyalarının konumu için
     @Bean
     InternalResourceViewResolver viewResolver()
     {
@@ -41,6 +42,7 @@ public class LokumConfig implements WebMvcConfigurer
         return viewResolver;
     }
 
+    //veri tabanı bağlantısı için datasource bilgileri
     @Bean
     public DataSource getDataSource()
     {
@@ -53,6 +55,7 @@ public class LokumConfig implements WebMvcConfigurer
         return dataSource;
     }
 
+    //formdao'in data source'u alması için
     @Bean
     public FormDAO getFormDAOImplementation()
     {

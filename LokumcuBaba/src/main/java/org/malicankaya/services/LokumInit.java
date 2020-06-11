@@ -11,6 +11,7 @@ import javax.servlet.ServletRegistration;
 
 public class LokumInit implements WebApplicationInitializer
 {
+    //frontcontrollerın işi ele alması için. init olduğunda dispatcherservlet devreye girer
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException
     {
